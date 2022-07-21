@@ -1,0 +1,18 @@
+.Lpage_container > p {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+}
+
+.Lpage_container > .button_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 3em 40em 0 40em;
+}
+
+.Lpage_container > .button_container > input {
+  margin: 0.3em;
+}
+/*# sourceMappingURL=LandingPage.css.map */
