@@ -1,4 +1,5 @@
 import React from "react";
+import {useLocation} from "react-router-dom"
 import "./cp.css";
 import ProfileCard from "../../Components/Profcard/profileCard";
 import Modalcomp from "../../Components/Modal/modal";
@@ -7,7 +8,10 @@ import { useState, useEffect } from "react";
 const url = "https://api.github.com/users/atharvagadkari05/repos";
 function CardsPage() {
   const [data, setdata] = useState([]);
-  const [modalopen, setmodalopen] = useState(true);
+  const location = useLocation();
+  const {username}  = location.state
+
+  console.log(username)
 
   useEffect(() => {
     axios.get(url).then((response) => {
@@ -23,7 +27,7 @@ function CardsPage() {
         <ProfileCard  key={e.id} data={e} />
       ))}
 
-    {modalopen&&<Modalcomp openmodal = {setmodalopen()} />}
+    {/* {modalopen&&<Modalcomp openmodal = {setmodalopen()} />} */}
      
      
     </div>
